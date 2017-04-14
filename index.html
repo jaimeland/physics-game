@@ -3,17 +3,49 @@
   <head>
     <meta charset="UTF-8">
     <title>title</title>
+    <style type="text/css">
+    	.ball {
+    		background-color: blue;
+    		width: 30px;
+    		height: 30px;
+    		border-radius: 30px;
+    		position: absolute;
+    		bottom: 0;
+    	}
+
+    	.ball2 {
+    		background-color: red;
+    		width: 30px;
+    		height: 30px;
+    		border-radius: 30px;
+    		position: absolute;
+    		bottom: 0;
+    	}
+
+    	.canvas {
+    		background-color: black;
+    		height: 300px;
+    		position: relative;
+    	}
+    </style>
   </head>
   <body>
-  	Speed: <input type="number" name="speed">
-  	Angle: <input type="number" name="angle">
-  	<input type="submit" name="calculate">
+  	<form>
+	  	Speed: <input type="number" name="speed">
+	  	Angle: <input type="number" name="angle">
+	  	<input type="submit" name="calculate">
+	</form>
   	<br>
   	<br>
   	<label>Vertical Speed:</label><label name="vertical_speed"></label><br>
   	<label>Horizontal Speed:</label><label name="horizontal_speed"></label><br>
   	<label>Max Height:</label><label name="max_height"></label><br>
   	<label>Max displacement:</label><label name="max_displacement"></label><br>
+  	<label>Total time:</label><label name="total_time"></label><br>
+  	<div class="js_canvas canvas">
+  		<div class="ball js_ball"></div>
+  		<div class="ball2"></div>
+  	</div>
   	<script
 	  src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
 	  integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
